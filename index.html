@@ -27,23 +27,13 @@
             text-align: center;
         }
 
-        h1 {
-            margin-top: 20px;
-            margin-bottom: 10px;
-            color: #55baff;
-        }
-
-        p {
-            color: #ddd;
-        }
-
-        /* Animation at the Top */
+        /* Animation at the Very Top */
         .animation-container {
             display: flex;
             justify-content: center;
             align-items: center;
             width: 100%;
-            margin: 20px auto 30px;
+            margin: 0 auto 25px;
             padding: 0;
             position: relative;
         }
@@ -53,6 +43,16 @@
             margin: 0 auto;
             max-width: 100%;
             height: auto;
+        }
+
+        h1 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #55baff;
+        }
+
+        p {
+            color: #ddd;
         }
 
         /* Information Sections */
@@ -117,13 +117,12 @@
 
 <body>
 
-    <!-- Title -->
+    <!-- ANIMATION AT THE VERY TOP -->
+    <div class="animation-container" id="sketch-container"></div>
+
+    <!-- Title Below Animation -->
     <h1>Reflection and Symmetry Animation</h1>
     <p>Explore reflection and symmetry through animated motion.</p>
-
-    <!-- Animation Immediately Below Title -->
-    <div class="animation-container" id="sketch-container">
-    </div>
 
     <!-- Controls -->
     <div class="info-section">
