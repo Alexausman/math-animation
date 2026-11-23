@@ -9,64 +9,70 @@ let isPaused = false;
 
 function setup() {
     let canvas = createCanvas(600, 400);
+
+    // Attach animation to the top container
     canvas.parent("sketch-container");
 }
 
 function draw() {
-  background(25, 35, 55);
+    background(25, 35, 55);
 
-  // Center mirror line
-  stroke(255);
-  strokeWeight(2);
-  line(300, 90, 300, 330);
+    // Center mirror line
+    stroke(255);
+    strokeWeight(2);
+    line(300, 90, 300, 330);
 
-  // First object
-  fill(255, 190, 80);
-  noStroke();
-  circle(dotX, dotY, 30);
+    // First object
+    fill(255, 190, 80);
+    noStroke();
+    circle(dotX, dotY, 30);
 
-  // Mirror object
-  fill(100, 220, 255);
-  circle(mirrorX, dotY, 30);
+    // Mirror object
+    fill(100, 220, 255);
+    circle(mirrorX, dotY, 30);
 
-  if (isPaused == false) {
-    dotX = dotX + speed;
-    mirrorX = mirrorX - speed;
-  }
+    if (isPaused == false) {
+        dotX = dotX + speed;
+        mirrorX = mirrorX - speed;
+    }
 
-  if (dotX > 600) {
-    dotX = 0;
-    mirrorX = 600;
-  }
+    if (dotX > 600) {
+        dotX = 0;
+        mirrorX = 600;
+    }
 
-  fill(255);
-  textSize(25);
-  text("Mirror Image Motion", 190, 30);
+    // Animation title
+    fill(255);
+    textSize(25);
+    text("Mirror Image Motion", 190, 30);
 
-  fill(255);
-  textSize(15);
-  text("Alexa B. Usman | BSIT 2-B", 210, 70);
+    // Student information
+    fill(255);
+    textSize(15);
+    text("Alexa B. Usman | BSIT 2-B", 210, 70);
 
-  textSize(14);
-  fill(200, 220, 255);
-  text("SPACE = Pause / Resume", 18, 370);
-  text("+ = Faster | - = Slower", 18, 390);
+    // Keyboard controls
+    textSize(14);
+    fill(200, 220, 255);
+    text("SPACE = Pause / Resume", 18, 370);
+    text("+ = Faster | - = Slower", 18, 390);
 
-  fill(255, 190, 80);
-  text("Speed: " + speed, 450, 370);
+    // Speed display
+    fill(255, 190, 80);
+    text("Speed: " + speed, 450, 370);
 }
 
 function keyPressed() {
 
-  if (keyCode == 32) {
-    isPaused = !isPaused;
-  }
+    if (keyCode == 32) {
+        isPaused = !isPaused;
+    }
 
-  if (key == '+' || key == '=') {
-    speed = speed + 1;
-  }
+    if (key == '+' || key == '=') {
+        speed = speed + 1;
+    }
 
-  if (key == '-' && speed > 1) {
-    speed = speed - 1;
-  }
+    if (key == '-' && speed > 1) {
+        speed = speed - 1;
+    }
 }
