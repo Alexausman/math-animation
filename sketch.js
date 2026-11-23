@@ -8,7 +8,7 @@ let speed = 2;
 let isPaused = false;
 
 function setup() {
-    let canvas = createCanvas(600, 400);
+    createCanvas(600, 400);
 }
 
 function draw() {
