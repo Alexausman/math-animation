@@ -5,32 +5,137 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Animation and Explanation</title>
+    <title>Reflection and Symmetry Animation</title>
 
-    <script src="https://cdn.jsdelivr.net/npm/p5@2.3.4/lib/p5.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/p5.sound@0.4.1/dist/p5.sound.min.js"></script>
+    <!-- p5.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/p5.min.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Animation Code -->
+    <script src="sketch.js" defer></script>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #222;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 20px;
+            color: #55baff;
+        }
+
+        p {
+            color: #ddd;
+        }
+
+        /* Keep the animation at the top */
+        body > canvas {
+            display: block;
+            margin: 20px auto;
+        }
+
+        /* Information Sections */
+        .info-section {
+            background-color: #1e1e1e;
+            color: white;
+            padding: 25px;
+            margin: 20px auto;
+            max-width: 750px;
+            border-radius: 10px;
+            line-height: 1.8;
+            text-align: left;
+        }
+
+        .info-section h2 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #55baff;
+        }
+
+        .info-section a {
+            color: #55baff;
+            text-decoration: none;
+        }
+
+        .info-section a:hover {
+            text-decoration: underline;
+        }
+
+        .info-section li {
+            margin-bottom: 15px;
+        }
+
+        footer {
+            margin-top: 30px;
+            padding: 15px;
+            color: #aaa;
+            font-size: 13px;
+        }
+    </style>
 </head>
 
 <body>
 
-    <main>
+    <h1>Trigonometric Circular Orbit Animation</h1>
+    <p>Explore circular motion using trigonometric functions.</p>
 
-        <div id="sketch-container"></div>
+    <!-- Controls -->
+    <div class="info-section">
+        <h2>Controls</h2>
+        <ul>
+            <li><strong>SPACEBAR:</strong> Pause / Resume animation</li>
+            <li><strong>+ / - Keys:</strong> Increase / Decrease angular speed</li>
+        </ul>
+    </div>
 
-        <div class="text-container">
-            <h1>Animation Explanation</h1>
+    <!-- Video Explanation -->
+    <div class="info-section">
+        <h2>Video Explanation</h2>
+        <p>
+            <a href="https://www.youtube.com/watch?v=XKGItjLJxlI" target="_blank">
+                IT3 Final Drill Video Explanation
+            </a>
+        </p>
+    </div>
 
-            <p>
-                This animation demonstrates the mathematical concept.
-                It shows how the objects move and how the formula works.
-            </p>
-        </div>
+    <!-- Sources and References -->
+    <div class="info-section">
+        <h2>Sources & References</h2>
 
-    </main>
+        <ol>
+            <li>
+                <strong>p5.js Reference</strong><br>
+                <a href="https://p5js.org/reference/" target="_blank">
+                    https://p5js.org/reference/
+                </a><br>
+                Useful for learning coding functions.
+            </li>
 
-    <script src="sketch.js"></script>
+            <li>
+                <strong>Math Warehouse – Reflections Explorer</strong><br>
+                <a href="https://www.mathwarehouse.com/transformations/reflection/" target="_blank">
+                    https://www.mathwarehouse.com/transformations/reflection/
+                </a><br>
+                Helps explain how points and shapes are reflected across a line.
+            </li>
+
+            <li>
+                <strong>p5.js – Coordinates and Transformations</strong><br>
+                <a href="https://p5js.org/tutorials/coordinates-and-transformations/" target="_blank">
+                    https://p5js.org/tutorials/coordinates-and-transformations/
+                </a><br>
+                Explains coordinates and transformations using code.
+            </li>
+        </ol>
+    </div>
+
+    <footer>
+        Reflection and Symmetry Animation | IT3 Project
+    </footer>
 
 </body>
 </html>
