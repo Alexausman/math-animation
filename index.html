@@ -1,125 +1,78 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+let dotX = 0;
+let mirrorX = 600;
 
-    <title>Reflection and Symmetry Animation | IT3 Project</title>
+let dotY = 200;
+let speed = 2;
 
-    <!-- p5.js Library -->
-    <script src="https://cdn.jsdelivr.net/npm/p5@2.3.4/lib/p5.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/p5.sound@0.4.1/dist/p5.sound.min.js"></script>
+let isPaused = false;
 
-    <link rel="stylesheet" type="text/css" href="style.css">
+function setup() {
+    let canvas = createCanvas(600, 400);
 
-    <style>
-        body {
-            margin: 0;
-            padding: 30px;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-        }
+    // Attach animation to the top container
+    canvas.parent("sketch-container");
+}
 
-        main {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-        }
+function draw() {
+    background(25, 35, 55);
 
-        #sketch-container {
-            order: 1;
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            margin-bottom: 25px;
-        }
+    // Center mirror line
+    stroke(255);
+    strokeWeight(2);
+    line(300, 90, 300, 330);
 
-        #sketch-container canvas {
-            display: block;
-            max-width: 100%;
-            height: auto;
-        }
+    // First object
+    fill(255, 190, 80);
+    noStroke();
+    circle(dotX, dotY, 30);
 
-        .content {
-            order: 2;
-            width: 100%;
-            max-width: 800px;
-            text-align: left;
-        }
+    // Mirror object
+    fill(100, 220, 255);
+    circle(mirrorX, dotY, 30);
 
-        h1 {
-            text-align: center;
-        }
-    </style>
-</head>
+    if (isPaused == false) {
+        dotX = dotX + speed;
+        mirrorX = mirrorX - speed;
+    }
 
-<body>
+    if (dotX > 600) {
+        dotX = 0;
+        mirrorX = 600;
+    }
 
-    <main>
+    // Animation title
+    fill(255);
+    textSize(25);
+    text("Mirror Image Motion", 190, 30);
 
-        <!-- Animation at the TOP -->
-        <div id="sketch-container"></div>
+    // Student information
+    fill(255);
+    textSize(15);
+    text("Alexa B. Usman | BSIT 2-B", 210, 70);
 
-        <!-- Text at the BOTTOM -->
-        <div class="content">
+    // Keyboard controls
+    textSize(14);
+    fill(200, 220, 255);
+    text("SPACE = Pause / Resume", 18, 370);
+    text("+ = Faster | - = Slower", 18, 390);
 
-            <h1>Reflection and Symmetry Animation | IT3 Project</h1>
+    // Speed display
+    fill(255, 190, 80);
+    text("Speed: " + speed, 450, 370);
+}
 
-            <h2>Controls</h2>
+function keyPressed() {
 
-            <ul>
-                <li><strong>SPACEBAR:</strong> Pause / Resume animation</li>
-                <li><strong>+ / - Keys:</strong> Increase / Decrease angular speed</li>
-            </ul>
+    if (keyCode == 32) {
+        isPaused = !isPaused;
+    }
 
-            <h2>Video Explanation</h2>
+    if (key == '+' || key == '=') {
+        speed = speed + 1;
+    }
 
-            <p>
-                <a href="https://www.youtube.com/watch?v=XKGItjLJxlI" target="_blank">
-                    IT3 Final Drill Video Explanation
-                </a>
-            </p>
-
-            <h2>Sources & References</h2>
-
-            <ol>
-                <li>
-                    <strong>p5.js Reference</strong><br>
-                    <a href="https://p5js.org/reference/" target="_blank">
-                        https://p5js.org/reference/
-                    </a><br>
-                    Useful for learning coding functions.
-                </li>
-
-                <br>
-
-                <li>
-                    <strong>Math Warehouse – Reflections Explorer</strong><br>
-                    <a href="https://www.mathwarehouse.com/transformations/reflection/" target="_blank">
-                        https://www.mathwarehouse.com/transformations/reflection/
-                    </a><br>
-                    Helps explain how points and shapes are reflected across a line.
-                </li>
-
-                <br>
-
-                <li>
-                    <strong>p5.js – Coordinates and Transformations</strong><br>
-                    <a href="https://p5js.org/tutorials/coordinates-and-transformations/" target="_blank">
-                        https://p5js.org/tutorials/coordinates-and-transformations/
-                    </a><br>
-                    Explains coordinates and transformations using code.
-                </li>
-            </ol>
-
-        </div>
-
-    </main>
-
-    <!-- Your Animation Code -->
-    <script src="sketch.js"></script>
-
-</body>
-</html>
+    if (key == '-' && speed > 1) {
+        speed = speed - 1;
+    }
+}
