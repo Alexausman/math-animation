@@ -10,7 +10,7 @@
     <!-- p5.js Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/p5.min.js"></script>
 
-    <!-- Your Animation Code -->
+    <!-- Animation Code -->
     <script src="sketch.js" defer></script>
 
     <style>
@@ -36,16 +36,16 @@
         .animation-container {
             display: flex;
             justify-content: center;
-            align-items: top;
+            align-items: center;
+            width: 100%;
             margin: 20px auto;
-            max-width: 100%;
-            overflow-x: auto;
+            padding: 0;
+            position: relative;
         }
 
         .animation-container canvas {
             display: block;
-            max-width: 100%;
-            height: auto;
+            margin: 0 auto;
         }
 
         /* Information Sections */
@@ -94,7 +94,7 @@
     <h1>Trigonometric Circular Orbit Animation</h1>
     <p>Explore circular motion using trigonometric functions.</p>
 
-    <!-- Animation -->
+    <!-- Animation: Immediately Below Title -->
     <div class="animation-container" id="sketch-container"></div>
 
     <!-- Controls -->
