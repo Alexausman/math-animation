@@ -7,10 +7,7 @@
 
     <title>Reflection and Symmetry Animation</title>
 
-    <!-- p5.js Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/p5.min.js"></script>
-
-    <!-- Animation Code -->
     <script src="sketch.js" defer></script>
 
     <style>
@@ -27,8 +24,8 @@
             text-align: center;
         }
 
-        /* Animation at the Very Top */
-        .animation-container {
+        /* ANIMATION AT THE TOP */
+        #sketch-container {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -38,16 +35,13 @@
             position: relative;
         }
 
-        .animation-container canvas {
-            display: block;
-            margin: 0 auto;
-            max-width: 100%;
-            height: auto;
+        #sketch-container canvas {
+            display: block !important;
+            margin: 0 auto !important;
         }
 
         h1 {
             margin-top: 20px;
-            margin-bottom: 10px;
             color: #55baff;
         }
 
@@ -55,7 +49,6 @@
             color: #ddd;
         }
 
-        /* Information Sections */
         .info-section {
             background-color: #1e1e1e;
             color: white;
@@ -94,7 +87,6 @@
             font-size: 13px;
         }
 
-        /* Mobile Responsive */
         @media (max-width: 650px) {
             body {
                 padding: 10px;
@@ -104,7 +96,7 @@
                 font-size: 24px;
             }
 
-            .animation-container {
+            #sketch-container {
                 overflow: hidden;
             }
 
@@ -117,14 +109,14 @@
 
 <body>
 
-    <!-- ANIMATION AT THE VERY TOP -->
-    <div class="animation-container" id="sketch-container"></div>
+    <!-- FIRST: ANIMATION -->
+    <div id="sketch-container"></div>
 
-    <!-- Title Below Animation -->
+    <!-- SECOND: TITLE -->
     <h1>Reflection and Symmetry Animation</h1>
     <p>Explore reflection and symmetry through animated motion.</p>
 
-    <!-- Controls -->
+    <!-- CONTROLS -->
     <div class="info-section">
         <h2>Controls</h2>
         <ul>
@@ -133,7 +125,7 @@
         </ul>
     </div>
 
-    <!-- Video Explanation -->
+    <!-- VIDEO EXPLANATION -->
     <div class="info-section">
         <h2>Video Explanation</h2>
         <p>
@@ -143,7 +135,7 @@
         </p>
     </div>
 
-    <!-- Sources and References -->
+    <!-- SOURCES AND REFERENCES -->
     <div class="info-section">
         <h2>Sources & References</h2>
 
@@ -174,7 +166,6 @@
         </ol>
     </div>
 
-    <!-- Footer -->
     <footer>
         Reflection and Symmetry Animation | IT3 Project
     </footer>
