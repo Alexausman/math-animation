@@ -8,10 +8,7 @@ let speed = 2;
 let isPaused = false;
 
 function setup() {
-    let canvas = createCanvas(600, 400);
-
-    // Attach animation to the top container
-    canvas.parent("sketch-container");
+canvas = createCanvas(600, 400);
 }
 
 function draw() {
