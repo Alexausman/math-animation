@@ -7,10 +7,10 @@
 
     <title>Trigonometric Circular Orbit Animation</title>
 
-    <!-- Load p5.js Library -->
+    <!-- p5.js Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/p5.min.js"></script>
 
-    <!-- Load Animation Code -->
+    <!-- Your Animation Code -->
     <script src="sketch.js" defer></script>
 
     <style>
@@ -28,6 +28,11 @@
             color: #55baff;
         }
 
+        p {
+            color: #ddd;
+        }
+
+        /* Animation at the Top */
         .animation-container {
             display: flex;
             justify-content: center;
@@ -43,6 +48,7 @@
             height: auto;
         }
 
+        /* Information Sections */
         .info-section {
             background-color: #1e1e1e;
             color: white;
@@ -84,100 +90,81 @@
 
 <body>
 
-    <!-- Website Title -->
+    <!-- Title -->
     <h1>Trigonometric Circular Orbit Animation</h1>
-
     <p>Explore circular motion using trigonometric functions.</p>
 
-    <!-- Animation Section -->
-    <div class="animation-container" id="sketch-container">
-    </div>
+    <!-- Animation -->
+    <div class="animation-container" id="sketch-container"></div>
 
-    <!-- Controls Section -->
+    <!-- Controls -->
     <div class="info-section">
         <h2>Controls</h2>
-
         <ul>
             <li><strong>SPACEBAR:</strong> Pause / Resume animation</li>
             <li><strong>+ / - Keys:</strong> Increase / Decrease angular speed</li>
         </ul>
     </div>
 
-    <!-- Video Explanation Section -->
+    <!-- Video Explanation -->
     <div class="info-section">
         <h2>Video Explanation</h2>
-
         <p>
-            Watch the math & code explanation here:
-            <a href="https://www.youtube.com/watch?v=XKGItjLJxlI"
-               target="_blank">
+            <a href="https://www.youtube.com/watch?v=XKGItjLJxlI" target="_blank">
                 IT3 Final Drill Video Explanation
             </a>
         </p>
     </div>
 
-    <!-- Sources and References Section -->
+    <!-- Sources and References -->
     <div class="info-section">
         <h2>Sources & References</h2>
 
         <ol>
             <li>
-                <strong>p5.js Reference</strong> –
-                <a href="https://p5js.org/reference/?utm_source=chatgpt.com"
-                   target="_blank">
-                    Open p5.js Reference
-                </a>
-                <br>
+                <strong>p5.js Reference</strong><br>
+                <a href="https://p5js.org/reference/" target="_blank">
+                    https://p5js.org/reference/
+                </a><br>
                 Useful for learning coding functions, but it does not directly teach the math concept of reflection and symmetry.
             </li>
 
             <li>
-                <strong>The Nature of Code by Daniel Shiffman</strong> –
-                <a href="https://natureofcode.com/oscillation/"
-                   target="_blank">
-                    Open Nature of Code
-                </a>
-                <br>
-                Referenced Chapter 3 (Oscillation) for understanding movement and converting polar coordinates into Cartesian coordinates.
+                <strong>The Nature of Code by Daniel Shiffman</strong><br>
+                <a href="https://natureofcode.com/oscillation/" target="_blank">
+                    https://natureofcode.com/oscillation/
+                </a><br>
+                Chapter 3 (Oscillation) helps explain movement and converting polar coordinates into Cartesian coordinates.
             </li>
 
             <li>
-                <strong>Math Warehouse – Reflections Explorer</strong> –
-                <a href="https://www.mathwarehouse.com/transformations/reflection/?utm_source=chatgpt.com"
-                   target="_blank">
-                    Open Reflections Explorer
-                </a>
-                <br>
+                <strong>Math Warehouse – Reflections Explorer</strong><br>
+                <a href="https://www.mathwarehouse.com/transformations/reflection/" target="_blank">
+                    https://www.mathwarehouse.com/transformations/reflection/
+                </a><br>
                 Helps explain how points and shapes are reflected across a line.
             </li>
 
             <li>
-                <strong>p5.js – Coordinates and Transformations</strong> –
-                <a href="https://p5js.org/tutorials/coordinates-and-transformations/?utm_source=chatgpt.com"
-                   target="_blank">
-                    Open Coordinates and Transformations
+                <strong>p5.js – Coordinates and Transformations</strong><br>
+                <a href="https://p5js.org/tutorials/coordinates-and-transformations/" target="_blank">
+                    https://p5js.org/tutorials/coordinates-and-transformations/
                 </a>
-                <br>
-                Helps explain the coordinate system and how objects can be moved, rotated, and transformed in p5.js.
             </li>
 
             <li>
-                <strong>MDN Web Docs</strong> –
-                <a href="https://developer.mozilla.org/"
-                   target="_blank">
-                    Open MDN Web Docs
-                </a>
-                <br>
-                Referenced for standard HTML5 structure and JavaScript keyboard event constants.
+                <strong>MDN Web Docs</strong><br>
+                <a href="https://developer.mozilla.org/" target="_blank">
+                    https://developer.mozilla.org/
+                </a><br>
+                Reference for HTML structure and JavaScript.
             </li>
         </ol>
     </div>
 
-    <!-- Footer -->
     <footer>
-        Reflection and Symetry Animation | IT3 Final Project
+        Trigonometric Circular Orbit Animation | IT3 Project
     </footer>
 
 </body>
 </html>
-
