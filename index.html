@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Trigonometric Circular Orbit Animation</title>
 
     <!-- Load p5.js Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/p5.min.js"></script>
 
     <!-- Load Custom Sketch -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/p5.min.js"></script>
+    <script src="sketch.js"></script>
 
     <style>
         body {
@@ -34,6 +35,12 @@
             margin: 20px auto;
             max-width: 100%;
             overflow-x: auto;
+        }
+
+        .animation-container canvas {
+            display: block;
+            max-width: 100%;
+            height: auto;
         }
 
         .info-section {
@@ -77,7 +84,11 @@
 
 <body>
 
-   
+    <!-- Website Title -->
+    <h1>Trigonometric Circular Orbit Animation</h1>
+
+    <p>Explore circular motion using trigonometric functions.</p>
+
     <!-- Animation Section -->
     <div class="animation-container" id="sketch-container">
     </div>
@@ -88,7 +99,7 @@
 
         <ul>
             <li><strong>SPACEBAR:</strong> Pause / Resume animation</li>
-            <li><strong> + / - Keys:</strong> Increase / Decrease angular speed</li>
+            <li><strong>+ / - Keys:</strong> Increase / Decrease angular speed</li>
         </ul>
     </div>
 
