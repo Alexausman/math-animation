@@ -9,7 +9,6 @@ let isPaused = false;
 
 function setup() {
     let canvas = createCanvas(600, 400);
-    canvas.parent("sketch-container");
 }
 
 function draw() {
