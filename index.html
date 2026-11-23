@@ -2,37 +2,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Animation and Explanation</title>
+    <title>Reflection and Symmetry Animation | IT3 Project</title>
 
     <!-- p5.js Library -->
     <script src="https://cdn.jsdelivr.net/npm/p5@2.3.4/lib/p5.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/p5.sound@0.4.1/dist/p5.sound.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="style.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 30px;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        #sketch-container {
+            order: 1;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-bottom: 25px;
+        }
+
+        #sketch-container canvas {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .content {
+            order: 2;
+            width: 100%;
+            max-width: 800px;
+            text-align: left;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
 
     <main>
 
-        <!-- Animation at the Top -->
+        <!-- Animation at the TOP -->
         <div id="sketch-container"></div>
 
-        <!-- Text at the Bottom -->
-        <div class="text-container">
-            <h1>Animation Explanation</h1>
+        <!-- Text at the BOTTOM -->
+        <div class="content">
+
+            <h1>Reflection and Symmetry Animation | IT3 Project</h1>
+
+            <h2>Controls</h2>
+
+            <ul>
+                <li><strong>SPACEBAR:</strong> Pause / Resume animation</li>
+                <li><strong>+ / - Keys:</strong> Increase / Decrease angular speed</li>
+            </ul>
+
+            <h2>Video Explanation</h2>
 
             <p>
-                This animation demonstrates the mathematical concept.
-                It shows how the objects move and how the formula works.
+                <a href="https://www.youtube.com/watch?v=XKGItjLJxlI" target="_blank">
+                    IT3 Final Drill Video Explanation
+                </a>
             </p>
+
+            <h2>Sources & References</h2>
+
+            <ol>
+                <li>
+                    <strong>p5.js Reference</strong><br>
+                    <a href="https://p5js.org/reference/" target="_blank">
+                        https://p5js.org/reference/
+                    </a><br>
+                    Useful for learning coding functions.
+                </li>
+
+                <br>
+
+                <li>
+                    <strong>Math Warehouse – Reflections Explorer</strong><br>
+                    <a href="https://www.mathwarehouse.com/transformations/reflection/" target="_blank">
+                        https://www.mathwarehouse.com/transformations/reflection/
+                    </a><br>
+                    Helps explain how points and shapes are reflected across a line.
+                </li>
+
+                <br>
+
+                <li>
+                    <strong>p5.js – Coordinates and Transformations</strong><br>
+                    <a href="https://p5js.org/tutorials/coordinates-and-transformations/" target="_blank">
+                        https://p5js.org/tutorials/coordinates-and-transformations/
+                    </a><br>
+                    Explains coordinates and transformations using code.
+                </li>
+            </ol>
+
         </div>
 
     </main>
 
+    <!-- Your Animation Code -->
     <script src="sketch.js"></script>
 
 </body>
