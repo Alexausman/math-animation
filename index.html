@@ -7,7 +7,10 @@
 
     <title>Reflection and Symmetry Animation</title>
 
+    <!-- p5.js Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/p5.min.js"></script>
+
+    <!-- Animation Code -->
     <script src="sketch.js" defer></script>
 
     <style>
@@ -24,7 +27,7 @@
             text-align: center;
         }
 
-        /* ANIMATION AT THE TOP */
+        /* ANIMATION AT THE VERY TOP */
         #sketch-container {
             display: flex;
             justify-content: center;
@@ -32,12 +35,11 @@
             width: 100%;
             margin: 0 auto 25px;
             padding: 0;
-            position: relative;
         }
 
         #sketch-container canvas {
-            display: block !important;
-            margin: 0 auto !important;
+            display: block;
+            margin: 0 auto;
         }
 
         h1 {
@@ -49,6 +51,7 @@
             color: #ddd;
         }
 
+        /* Information Sections */
         .info-section {
             background-color: #1e1e1e;
             color: white;
@@ -97,7 +100,7 @@
             }
 
             #sketch-container {
-                overflow: hidden;
+                overflow-x: auto;
             }
 
             .info-section {
@@ -114,6 +117,7 @@
 
     <!-- SECOND: TITLE -->
     <h1>Reflection and Symmetry Animation</h1>
+
     <p>Explore reflection and symmetry through animated motion.</p>
 
     <!-- CONTROLS -->
